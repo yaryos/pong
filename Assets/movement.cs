@@ -8,10 +8,12 @@ public class movement : MonoBehaviour
     public KeyCode UpKey;
     public KeyCode DownKey;
     public float speed = 2;
-
+    public float defaultSpeed;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        defaultSpeed = speed;
+        rigidbody2d = GetComponent<Rigidbody2D>();
       print("HELLO FROM START");  
     }
 
